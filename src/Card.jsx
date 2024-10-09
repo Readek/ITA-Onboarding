@@ -1,8 +1,6 @@
 import './Card.css'
 
-export function Card({ title, desc, bgCol, img, nextEv, prevEv, count }) {
-
-    const maxCount = 3;
+export function Card({ title, desc, bgCol, img, nextEv, prevEv, count, maxCount }) {
 
     // progress dots, active if count matches loop count
     const progress = [];

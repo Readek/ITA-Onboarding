@@ -42,6 +42,7 @@ function App() {
         nextEv={handleClickNext}
         prevEv={handleClickPrev}
         count={step}
+        maxCount={tutorialData.length}
       />
     </div>
   )
