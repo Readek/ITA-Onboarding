@@ -1,6 +1,6 @@
 import './Card.css'
 
-export function Card({ title, desc, bgCol, img, nextEv, prevEv, count, maxCount }) {
+export function Card({ title, desc, bgCol, img, nextEv, prevEv, count, maxCount, setCount }) {
 
     // progress dots, active if count matches loop count
     const progress = [];
@@ -9,7 +9,7 @@ export function Card({ title, desc, bgCol, img, nextEv, prevEv, count, maxCount 
         if (count == i) {
            classText += ' onboardingCardProgressActive';
         }
-        progress.push(<div className={classText}></div>)
+        progress.push(<div className={classText} onClick={() => {setCount(i)}}></div>)
     }
 
     return(

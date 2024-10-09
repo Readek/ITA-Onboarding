@@ -51,10 +51,12 @@
     border-radius: 10px;
     background-color: grey;
     transition: background-color .3s, width .3s;
+    cursor: pointer;
 }
 .onboardingCardProgressActive {
     width: 25px;
     background-color: black;
+    cursor: default;
 }
 
 .onboardingCardBtnDiv {

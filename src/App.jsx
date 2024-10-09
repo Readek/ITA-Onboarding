@@ -32,6 +32,10 @@ function App() {
     }
   }
 
+  function forceStep(num) {
+    setStep(num);
+  }
+
   return (
     <div className=''>
       <Card
@@ -43,6 +47,7 @@ function App() {
         prevEv={handleClickPrev}
         count={step}
         maxCount={tutorialData.length}
+        setCount={forceStep}
       />
     </div>
   )
