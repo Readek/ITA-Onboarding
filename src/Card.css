@@ -8,6 +8,30 @@
     gap: 20px;
     padding-bottom: 25px;
 }
+@keyframes swipeRightIn {
+    0% {transform: translateX(75px);}
+    100% {transform: translateX(0px);}
+}
+@keyframes swipeLeftIn {
+    0% {transform: translateX(-75px);}
+    100% {transform: translateX(0px);}
+}
+@keyframes swipeRightOut {
+    0% {transform: translateX(0px);}
+    100% {transform: translateX(75px);}
+}
+@keyframes swipeLeftOut {
+    0% {transform: translateX(0px);}
+    100% {transform: translateX(-75px);}
+}
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 .onboardingCardImg {
     height: 400px;

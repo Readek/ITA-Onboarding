@@ -1,6 +1,6 @@
 import './Card.css'
 
-export function Card({ title, desc, bgCol, img, nextEv, prevEv, count, maxCount, setCount }) {
+export function Card({ title, desc, bgCol, img, nextEv, prevEv, count, maxCount, setCount, anim }) {
 
     // progress dots, active if count matches loop count
     const progress = [];
@@ -13,7 +13,7 @@ export function Card({ title, desc, bgCol, img, nextEv, prevEv, count, maxCount,
     }
 
     return(
-        <div className="onboardingCard">
+        <div className="onboardingCard" style={{animation: anim}}>
             <img className="onboardingCardImg" style={{backgroundColor: bgCol}} src={img} alt="Card's image" />
             <div className='onboardingCardTextDiv'>
                 <div className="onboardingCardTitle">{title}</div>

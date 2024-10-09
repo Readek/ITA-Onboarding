@@ -6,12 +6,19 @@ import { tutorialData } from './TutorialData.mjs'
 function App() {
 
   const [ step, setStep ] = useState(0);
+  const [ cardAnim, setCardAnim] = useState("");
 
-  function handleClickNext() {
+  async function handleClickNext() {
+    setCardAnim("swipeLeftOut .25s both, fadeOut .25s both");
+    await new Promise(resolve => setTimeout(resolve, 250));
     nextStep();
+    setCardAnim("swipeRightIn .25s both, fadeIn .25s both")
   }
-  function handleClickPrev() {
-    prevStep()
+  async function handleClickPrev() {
+    setCardAnim("swipeRightOut .25s both, fadeOut .25s both");
+    await new Promise(resolve => setTimeout(resolve, 250));
+    prevStep();
+    setCardAnim("swipeLeftIn .25s both, fadeIn .25s both")
   }
 
   /** Updates to the next step or goes back to the first if at end */
@@ -48,6 +55,7 @@ function App() {
         count={step}
         maxCount={tutorialData.length}
         setCount={forceStep}
+        anim={cardAnim}
       />
     </div>
   )
