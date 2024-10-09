@@ -1,0 +1,67 @@
+.onboardingCard {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    gap: 20px;
+    padding-bottom: 25px;
+}
+
+.onboardingCardImg {
+    height: 400px;
+    max-width: 100%;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.onboardingCardTextDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.onboardingCardTitle {
+    font-weight: bold;
+    color: black;
+    font-size: larger;
+}
+
+.onboardingCardDesc {
+    color: grey;
+}
+
+.onboardingCardBottomDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.onboardingCardProgressDiv {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.onboardingCardProgress {
+    height: 7px;
+    width: 7px;
+    border-radius: 10px;
+    background-color: grey;
+    transition: background-color .3s, width .3s;
+}
+.onboardingCardProgressActive {
+    width: 25px;
+    background-color: black;
+}
+
+.onboardingCardBtnDiv {
+    display: flex;
+}
+.onboardingCardBtnNext {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}

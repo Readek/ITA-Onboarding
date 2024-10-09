@@ -28,6 +28,7 @@ function App() {
         bgCol={tutorialData[step].bgColor}
         img={tutorialData[step].image}
         clickEv={handleClick}
+        count={step}
       />
     </div>
   )
