@@ -7,8 +7,11 @@ function App() {
 
   const [ step, setStep ] = useState(0);
 
-  function handleClick() {
+  function handleClickNext() {
     nextStep();
+  }
+  function handleClickPrev() {
+    prevStep()
   }
 
   /** Updates to the next step or goes back to the first if at end */
@@ -20,6 +23,15 @@ function App() {
     }
   }
 
+  /** Updates to the next step or goes back to the first if at end */
+  function prevStep() {
+    if (step == 0) {
+      setStep(tutorialData.length - 1);
+    } else {
+      setStep(step-1);
+    }
+  }
+
   return (
     <div className=''>
       <Card
@@ -27,7 +39,8 @@ function App() {
         desc={tutorialData[step].description}
         bgCol={tutorialData[step].bgColor}
         img={tutorialData[step].image}
-        clickEv={handleClick}
+        nextEv={handleClickNext}
+        prevEv={handleClickPrev}
         count={step}
       />
     </div>

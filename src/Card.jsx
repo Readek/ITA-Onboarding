@@ -1,11 +1,12 @@
 import './Card.css'
 
-export function Card({ title, desc, bgCol, img, clickEv, count }) {
+export function Card({ title, desc, bgCol, img, nextEv, prevEv, count }) {
 
-    const progress = [];
+    const maxCount = 3;
 
     // progress dots, active if count matches loop count
-    for (let i = 0; i < 3; i++) { // hardcoded to 3 steps
+    const progress = [];
+    for (let i = 0; i < maxCount; i++) {
         let classText = "onboardingCardProgress";
         if (count == i) {
            classText += ' onboardingCardProgressActive';
@@ -25,7 +26,8 @@ export function Card({ title, desc, bgCol, img, clickEv, count }) {
                     {progress}
                 </div>
                 <div className='onboardingCardBtnDiv'>
-                    <button className="onboardingCardBtnNext" onClick={clickEv}>Next</button>
+                    {count > 0 && <button className="onboardingCardBtnPrev" onClick={prevEv}>Prev</button>}
+                    {count < maxCount - 1 && <button className="onboardingCardBtnNext" onClick={nextEv}>Next</button>}
                 </div>
             </div>
         </div>

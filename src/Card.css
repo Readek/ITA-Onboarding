@@ -59,9 +59,19 @@
 
 .onboardingCardBtnDiv {
     display: flex;
+    gap: 10px;
 }
 .onboardingCardBtnNext {
     height: 50px;
     width: 50px;
     border-radius: 100%;
+    cursor: pointer;
+}
+.onboardingCardBtnPrev {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
