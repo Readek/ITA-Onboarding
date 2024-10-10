@@ -11,4 +11,5 @@ To run locally, run:
 
 Preview of the project:
 
-https://raw.githubusercontent.com/Readek/ITA-Onboarding/refs/heads/main/Preview.mp4
+https://github.com/user-attachments/assets/c33c1fcb-a80c-4ab2-b30c-69e3e309b45e
+
